@@ -21,9 +21,8 @@ public class DriverSetUp {
     public static void setupClass() {
         testContext.loadConfigurations("src/test/resources/");
         String environment = testContext.getProperty("environment");
-        String browser = testContext.getProperty("browser"); // Pobieranie 'browser' z najwyższego poziomu
+        String browser = testContext.getProperty("browser");
         setupWebDriver(browser);
-
         String baseUrl = testContext.getProperty("environments." + environment + ".webUrl");
         driver.get(baseUrl);
     }

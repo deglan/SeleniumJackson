@@ -55,8 +55,4 @@ public class TestContext {
 
         return (T) currentValue;
     }
-
-    public Map<String, Object> getAllConfigs() {
-        return allConfigs;
-    }
 }
